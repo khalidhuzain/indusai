@@ -34,6 +34,7 @@ Check:
 
 ```bash
 python --version
+```
 ### 2. AWS Credentials
 You must have AWS credentials configured as environment variables:
 
@@ -47,8 +48,9 @@ AWS_DEFAULT_REGION=us-east-1
 
 ## Installation
 Install required Python packages:
-
+```bash
 pip install -r requirements.txt
+````
 ## How to Run
 From the Exercise-1 directory:
 
@@ -94,3 +96,4 @@ How prompt parameters affect model output
 ## Next Step
 Proceed to Exercise-2, where you will add voice interaction (Speech-to-Text) to the assistant.
 ```
+
