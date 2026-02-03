@@ -1,0 +1,96 @@
+import os
+import boto3
+import json
+import numpy as np
+
+# ================= CONFIG =================
+REGION = "us-east-1"
+EMBED_MODEL_ID = "amazon.titan-embed-text-v2"
+LLM_MODEL_ID = "us.amazon.nova-lite-v1:0"
+DOCS_PATH = "documents"
+TOP_K = 3
+# =========================================
+
+bedrock = boto3.client("bedrock-runtime", region_name=REGION)
+
+# ------------------ Utilities ------------------
+
+def cosine_similarity(a, b):
+    return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
+
+def chunk_text(text, chunk_size=400):
+    chunks = []
+    for i in range(0, len(text), chunk_size):
+        chunks.append(text[i:i + chunk_size])
+    return chunks
+
+# ------------------ Load Documents ------------------
+
+documents = []
+for file in os.listdir(DOCS_PATH):
+    if file.endswith(".txt"):
+        with open(os.path.join(DOCS_PATH, file), "r", encoding="utf-8") as f:
+            text = f.read()
+            for chunk in chunk_text(text):
+                documents.append(chunk)
+
+print(f"?? Loaded {len(documents)} document chunks")
+
+# ------------------ Create Embeddings ------------------
+
+def embed_text(text):
+    response = bedrock.invoke_model(
+        modelId=EMBED_MODEL_ID,
+        body=json.dumps({"inputText": text}),
+        contentType="application/json",
+        accept="application/json"
+    )
+    result = json.loads(response["body"].read())
+    return np.array(result["embedding"])
+
+doc_embeddings = [embed_text(doc) for doc in documents]
+print("? Document embeddings created")
+
+# ------------------ Ask Questions ------------------
+
+print("\n?? RAG Assistant (type 'exit' to quit)\n")
+
+while True:
+    query = input("You: ").strip()
+    if query.lower() == "exit":
+        print("\nGoodbye ??")
+        break
+
+    query_embedding = embed_text(query)
+
+    # Similarity search
+    scores = [
+        cosine_similarity(query_embedding, emb)
+        for emb in doc_embeddings
+    ]
+
+    top_indices = np.argsort(scores)[-TOP_K:][::-1]
+    context = "\n".join([documents[i] for i in top_indices])
+
+    prompt = f"""
+Answer the question using ONLY the context below.
+
+Context:
+{context}
+
+Question:
+{query}
+"""
+
+    response = bedrock.converse(
+        modelId=LLM_MODEL_ID,
+        system=[{"text": "You are a helpful AI assistant."}],
+        messages=[{"role": "user", "content": [{"text": prompt}]}],
+        inferenceConfig={"maxTokens": 200, "temperature": 0.3}
+    )
+
+    chunks = response["output"]["message"]["content"]
+    answer = "".join(part.get("text", "") for part in chunks)
+
+    print("\n?? AI:", answer, "\n")
+

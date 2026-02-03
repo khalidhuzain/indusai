@@ -1,0 +1,4 @@
+Artificial Intelligence (AI) refers to machines that can perform tasks
+that normally require human intelligence. These tasks include learning,
+reasoning, problem-solving, and understanding language.
+
