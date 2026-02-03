@@ -40,9 +40,9 @@ Ensure Python **3.10 or later** is installed.
 
 Check:
 
-bash
+```bash
 python --version
-
+```
 ### 2. AWS Credentials
 
 You must have AWS credentials set as environment variables:
@@ -67,15 +67,15 @@ If not set, files will be stored under unknown-student/.
 ## Installation
 
 Install required Python packages:
-
+```bash
 pip install -r requirements.txt
-
+```
 ## How to Run
 
 From the Exercise-2 directory:
-
+```bash
 python exercise2_voice_ai_assistant.py
-
+```
 ## What Will Happen
 
 The program records 5 seconds of audio from your microphone
@@ -128,3 +128,4 @@ How to design lightweight, reliable AI pipelines
 ## Next
 
 Proceed to Exercise-3, where we will introduce Retrieval-Augmented Generation (RAG).
+
