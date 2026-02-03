@@ -8,7 +8,6 @@ In this exercise, you will build a **knowledge-aware AI assistant** using
 Unlike a normal chatbot, this assistant will answer questions
 **using your own documents**, not just general knowledge.
 
----
 
 ## What You Will Learn
 
@@ -18,10 +17,9 @@ Unlike a normal chatbot, this assistant will answer questions
 - How AWS Bedrock fits into RAG systems
 - Why RAG ≠ model training
 
----
 
 ## Architecture Overview
-
+```bash
 Local Documents (.txt)
 ↓
 Text Chunking
@@ -36,8 +34,8 @@ Amazon Nova Lite (Bedrock)
 ↓
 Grounded Answer
 
+```
 
----
 
 ## Prerequisites
 
@@ -45,8 +43,9 @@ Grounded Answer
 Python **3.10 or later**
 
 Check:
-`bash
+```bash
 python --version
+```
 ### 2. AWS Credentials
 Ensure the following environment variables are set:
 
@@ -57,8 +56,12 @@ AWS_SECRET_ACCESS_KEY
 AWS_DEFAULT_REGION=us-east-1
 
 ## Installation
+```bash
 pip install -r requirements.txt
-Folder Structure
+```
+
+## Folder Structure
+```bash
 Exercise-3/
 ├── documents/
 │   ├── ai_basics.txt
@@ -67,8 +70,11 @@ Exercise-3/
 ├── rag_assistant.py
 ├── requirements.txt
 └── README.md
+```
 ## How to Run
+```bash
 python rag_assistant.py
+```
 Then ask questions like:
 
 What is Amazon Bedrock?
@@ -100,5 +106,6 @@ A text chatbot
 A voice assistant
 
 A document-aware AI assistant (RAG)
+
 
 #Congratulations 🎉
