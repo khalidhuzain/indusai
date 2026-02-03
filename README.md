@@ -1,11 +1,11 @@
-# indusai
-Indus AI Week
-Applied AI on AWS — Indus AI Week
+# Indus AI Week
+
+## Applied AI on AWS — Indus AI Week
 
 Hands-on AI Training for Future Engineers
 Powered by INIT  (AWS Official Partner)
 
-📌 About This Repository
+## 📌 About This Repository
 
 This repository contains the official hands-on lab material for the
 “Applied AI on AWS” training delivered during Indus AI Week.
@@ -22,7 +22,7 @@ All exercises are:
 
 ✅ Non-commercial & educational
 
-🎯 Training Objectives
+## 🎯 Training Objectives
 
 By completing these labs, participants will learn:
 
@@ -36,18 +36,18 @@ How AI systems are designed safely and realistically
 
 This training emphasizes clarity, simplicity, and correct architecture.
 
-🧠 Learning Path (Progressive)
+## 🧠 Learning Path (Progressive)
 
 The repository is structured into three hands-on exercises, each building on the previous one.
-
+```bash
 applied-ai-on-aws/
 ├── Exercise-1/
 ├── Exercise-2/
 ├── Exercise-3/
 └── README.md
-
-🧪 Exercises Overview
-🔹 Exercise 1 — Text-Based AI Assistant
+```
+## 🧪 Exercises Overview
+### 🔹 Exercise 1 — Text-Based AI Assistant
 
 Goal: Build a conversational AI using Amazon Bedrock (Nova Lite)
 
@@ -61,7 +61,7 @@ Tune inference parameters
 
 📁 Folder: Exercise-1/
 
-🔹 Exercise 2 — Voice AI Assistant
+### 🔹 Exercise 2 — Voice AI Assistant
 
 Goal: Add voice interaction to your AI assistant
 
@@ -77,7 +77,7 @@ Experience a real voice-enabled AI pipeline
 
 📁 Folder: Exercise-2/
 
-🔹 Exercise 3 — Mini RAG (Knowledge AI)
+### 🔹 Exercise 3 — Mini RAG (Knowledge AI)
 
 Goal: Build a document-aware AI assistant
 
@@ -93,7 +93,7 @@ Generate answers grounded in your own data
 
 📁 Folder: Exercise-3/
 
-☁️ AWS Services Used
+## ☁️ AWS Services Used
 
 This training uses the following AWS services, exactly as they are used in real projects:
 
@@ -108,7 +108,7 @@ Amazon Transcribe (Speech-to-Text)
 No infrastructure management, no vector databases, no heavy frameworks —
 the focus is on core AI concepts.
 
-🔐 AWS Credentials & Security
+## 🔐 AWS Credentials & Security
 
 AWS credentials are provided only for the duration of the session
 
@@ -124,7 +124,7 @@ Console access
 
 All usage is temporary, controlled, and educational.
 
-🧑‍🎓 Intended Audience
+## 🧑‍🎓 Intended Audience
 
 Final-year Computer Science students
 
@@ -138,7 +138,7 @@ Artificial Intelligence
 
 Software Engineering
 
-🎓 About Indus AI Week
+## 🎓 About Indus AI Week
 
 Indus AI Week is a community-driven initiative aimed at:
 
@@ -150,9 +150,9 @@ Preparing youth for the future of technology
 
 This repository is part of that mission.
 
-🏢 About INIT Global
+##  🏢 About INIT
 
-INIT Global is an AWS Official Partner delivering:
+INIT is a software company and is an AWS Official Partner delivering:
 
 Cloud & AI solutions
 
@@ -162,7 +162,7 @@ Industry-focused AI systems
 
 This training is provided purely for educational and awareness purposes.
 
-📣 Acknowledgements
+## 📣 Acknowledgements
 
 Some concepts and inspiration are drawn from:
 
@@ -172,12 +172,12 @@ Public research
 
 Community contributions in the AI ecosystem
 
-🚀 How to Get Started
+##  🚀 How to Get Started
 
-👉 Start with Exercise-1/README.md
+### 👉 Start with Exercise-1/README.md
 Follow exercises in order for the best learning experience.
 
-📬 Contact & Follow-up
+### 📬 Contact & Follow-up
 
 Participants may receive:
 
@@ -187,11 +187,11 @@ Additional learning resources
 
 Further reading material
 
-via the official Indus AI Week communication channels.
+via the communication channels (Please fill in the google form ) .
 
-⭐ Final Note
+## ⭐ Final Note
 
 The goal of this training is not to turn you into an AI expert in one day —
 but to give you the confidence to build, explore, and learn responsibly.
 
-Happy learning 🚀
+#Happy learning 🚀
