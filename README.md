@@ -46,6 +46,88 @@ applied-ai-on-aws/
 ├── Exercise-3/
 └── README.md
 ```
+## 🔐 AWS Credentials Setup (Windows Command Prompt)
+
+These credentials will be provided to you during the session (via QR code).
+
+### Step 1️⃣ Open Command Prompt
+
+Press Win + R
+Type cmd
+Press Enter
+
+### Step 2️⃣ Set AWS Environment Variables
+
+Copy the values from your QR code and run the following commands
+(replace values with your own):
+```bash
+set AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY_HERE
+set AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY_HERE
+set AWS_DEFAULT_REGION=us-east-1
+```
+
+#### ⚠️ Important Notes
+
+Do NOT wrap values in quotes
+
+These variables apply to the current Command Prompt window only
+
+If you close the window, you must set them again
+
+### Step 3️⃣ Verify AWS Credentials
+
+Run:
+```bash
+aws sts get-caller-identity
+```
+
+If credentials are correct, you will see output similar to:
+
+Account: xxxxxxxxxxxx
+Arn: arn:aws:iam::xxxxxxxxxxxx:user/ai-student-01
+
+## 🧪 Python Virtual Environment Setup (Recommended)
+
+Using a virtual environment keeps your system clean and avoids conflicts.
+
+### Step 1️⃣ Navigate to the Project Folder
+cd applied-ai-on-aws
+
+### Step 2️⃣ Create a Virtual Environment
+```bash
+python -m venv venv
+```
+
+This creates a folder named venv.
+
+### Step 3️⃣ Activate the Virtual Environment
+```bash
+venv\Scripts\activate
+```
+
+You should see:
+
+(venv) C:\path\to\applied-ai-on-aws>
+
+### Step 4️⃣ Install Dependencies
+
+Run this inside each exercise folder:
+
+pip install -r requirements.txt
+
+### Step 5️⃣ Run the Exercises
+
+Example:
+
+cd Exercise-1
+python bedrock_conversational_assistant.py
+
+### ❌ Common Issues & Fixes
+'python' is not recognized
+
+Python is not added to PATH
+Reinstall Python and check Add Python to PATH
+
 ## Python Libraries (to be installed via pip)
 
 ```bash
