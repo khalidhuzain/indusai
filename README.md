@@ -145,7 +145,7 @@ Software Engineering
 
 ## 🎓 About Indus AI Week
 
-Indus AI Week is a community-driven initiative aimed at:
+Indus AI Week is a govt-driven initiative aimed at:
 
 Spreading AI awareness
 
