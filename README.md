@@ -187,7 +187,7 @@ Additional learning resources
 
 Further reading material
 
-via the communication channels (Please fill in the google form ) .
+via the communication channels (Please fill in the google form: https://forms.gle/SwV415hehPbvd3u1A ) .
 
 ## ⭐ Final Note
 
