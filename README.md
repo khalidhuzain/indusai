@@ -46,6 +46,11 @@ applied-ai-on-aws/
 ├── Exercise-3/
 └── README.md
 ```
+## Python Libraries (to be installed via pip)
+
+```bash
+pip install boto3 sounddevice scipy pyttsx3 numpy
+```
 ## 🧪 Exercises Overview
 ### 🔹 Exercise 1 — Text-Based AI Assistant
 
