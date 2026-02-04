@@ -40,16 +40,54 @@ This training emphasizes clarity, simplicity, and correct architecture.
 
 The repository is structured into three hands-on exercises, each building on the previous one.
 ```bash
-applied-ai-on-aws/
+indusai/
 ├── Exercise-1/
 ├── Exercise-2/
 ├── Exercise-3/
 └── README.md
 ```
+
+
+These credentials will be provided to you during the session (via printed QR code).
+## 📱➡️💻 How to Tranfer Printed QR Data from Mobile to PC (Using CopyPaste.me)
+
+The AWS credentials are provided via a printed QR code.
+Follow the steps below exactly to transfer the scanned data from your mobile phone to your PC.
+
+### 1️⃣ Scan the Printed QR Code
+
+Use your mobile phone camera or any QR scanner app
+Scan the printed QR code provided to you
+The QR code contains encoded text data (credentials)
+
+### 2️⃣ Copy the Scanned Data on Your Phone
+
+After scanning, the QR scanner will show text content
+Select all the text
+Copy it to your phone’s clipboard
+
+### 3️⃣ Open CopyPaste.me on Your PC/ Laptop
+
+Open your browser
+Go to:
+https://copypaste.me
+The website will open a QR Code interface
+Scan the QR on the copypaste.me
+This will open the same website on your phone 
+
+### 4️⃣ Paste the QR Data into CopyPaste.me
+Tap on the Text input field
+Paste the copied QR code data
+Click the Send button
+
+
+### 5️⃣ Retrieve the Data on Your PC
+
+The text you sent from your phone will now appear on the PC screen
+Copy the text from the PC browser
+Paste it into a Notepad to be used in command terminal 
+
 ## 🔐 AWS Credentials Setup (Windows Command Prompt)
-
-These credentials will be provided to you during the session (via QR code).
-
 ### Step 1️⃣ Open Command Prompt
 
 Press Win + R
