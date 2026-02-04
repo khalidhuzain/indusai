@@ -150,9 +150,9 @@ You should see:
 ### Step 4️⃣ Install Dependencies
 
 Run this inside each exercise folder:
-
+```bash
 pip install -r requirements.txt
-
+```
 ### Step 5️⃣ Run the Exercises
 
 Example:
