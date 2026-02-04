@@ -100,7 +100,10 @@ with urllib.request.urlopen(transcript_uri) as f:
 
 user_text = transcript_json["results"]["transcripts"][0]["transcript"]
 print(f"\n🗣️ You said: {user_text}")
-
+if not user_text or not user_text.strip():
+    print("⚠️ No speech detected or transcription empty.")
+    print("👉 Please speak clearly and try again.")
+    exit(0)
 # =================================================
 # STEP 4: SEND TEXT TO NOVA LITE
 # =================================================
@@ -136,3 +139,4 @@ tts_engine.say(assistant_text)
 tts_engine.runAndWait()
 
 print("✅ Done")
+
