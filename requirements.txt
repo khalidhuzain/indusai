@@ -1,0 +1,5 @@
+boto3
+sounddevice
+scipy
+pyttsx3
+numpy
