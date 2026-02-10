@@ -113,17 +113,33 @@ These variables apply to the current Command Prompt window only
 If you close the window, you must set them again
 
 ### Step 3️⃣ Verify AWS Credentials
+AWS CLI (Version 2)
 
-Run:
+Students must install AWS CLI v2.
+
+Download from (official AWS link):
+👉 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+After installation, verify:
+
+aws --version
+
+Expected output (example):
+
+aws-cli/2.x.x Python/3.x ...
+After the installation Run:
 ```bash
 aws sts get-caller-identity
 ```
 
 If credentials are correct, you will see output similar to:
-
-Account: xxxxxxxxxxxx
-Arn: arn:aws:iam::xxxxxxxxxxxx:user/ai-student-01
-
+```bash
+{
+  "Account": "123456789012",
+  "Arn": "arn:aws:iam::123456789012:user/ai-student-01",
+  "UserId": "AIDAEXAMPLE"
+}
+```
 ## 🧪 Python Virtual Environment Setup (Recommended)
 
 Using a virtual environment keeps your system clean and avoids conflicts.
